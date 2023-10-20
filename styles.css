@@ -7,3 +7,22 @@ body {
     font-family: 'Kanit', sans-serif;
     font-family: 'Mooli', sans-serif;
   }
+
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  width: 30%;
+  height: auto;
+}
+
+.card-title {
+  font-size: 30px;
+  
+}
+
+.card-img {
+  width: 28%;
+  height: auto;
+}
