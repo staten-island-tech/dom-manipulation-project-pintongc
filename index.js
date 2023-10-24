@@ -15,6 +15,7 @@ const DOMSelectors = {
     h3s: document.querySelectorAll("h3"),
     imgs: document.querySelectorAll("img"),
     text: document.querySelector(".profile"),
+    cardTitle: document.querySelector(".card-title"),
 };
 
 firstName();
