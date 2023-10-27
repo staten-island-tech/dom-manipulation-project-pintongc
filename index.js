@@ -1,73 +1,56 @@
-const formfirst = document.querySelector("#form")
-const formlast = document.querySelector("#form1")
-const formimg = document.querySelector("#form2")
-
-console.log(formlast)
-
 const DOMSelectors = {
-    formfirst: document.querySelector("#form"),
-    formlast: document.querySelector("#form1"),
-    formimg: document.querySelector("#form2"),
-    firstName: document.querySelector(".first-name"),
-    lastName: document.querySelector(".last-name"),
-    profilePicture: document.querySelector(".profile-picture"),
-    h2s: document.querySelectorAll("h2"),
-    h3s: document.querySelectorAll("h3"),
-    imgs: document.querySelectorAll("img"),
-    text: document.querySelector(".profile"),
-    cardTitle: document.querySelector(".card-title"),
-    reset: document.querySelector("#Reset"),
-    gallery: document.querySelector(".gallery"),
+  form: document.querySelector("#form"),
+  firstName: document.querySelector(".first-name"),
+  lastName: document.querySelector(".last-name"),
+  profilePicture: document.querySelector(".profile-picture"),
+  text: document.querySelector(".profile"),
+  gallery: document.querySelector(".gallery"),
 };
 
-function firstName() {
-    DOMSelectors.formfirst.addEventListener("submit", function (event) {
-        event.preventDefault();
-        console.log(DOMSelectors.firstName.value);
-        DOMSelectors.h2s.forEach((el) => el.textContent = DOMSelectors.firstName.value;
-        );
-    });
-};
+DOMSelectors.form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-const firstName = DOMSelectors.firstName.value;
-const lastName = DOMSelectors.lastName.value;
-const profilePicture = DOMSelectors.profilePicture.value;
+  function addProfile() {
+    const profilePictureLink = DOMSelectors.profilePicture.value;
+    DOMSelectors.gallery.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+        <div class="card-title">${DOMSelectors.firstName.value} ${DOMSelectors.lastName.value}</div>
+        <div class="card-img"> <img
+          src="${profilePictureLink}"
+          alt="" srcset=""></div>
+        <button class="button" id="Reset">Reset</button>
+      </div>`
+    );
+  };
 
-DOMSelectors.firstName.insertAdjacentHTML("beforeend", '<div class="card" $(DOMSelectors.firstName.value) </div>')
+  function createProfile() {
+    const firstNameInput = DOMSelectors.firstName.value;
+    const lastNameInput = DOMSelectors.lastName.value;
 
-function createProfile() {
-
-  const firstName = document.querySelector('#first-name').value;
-  const lastName = document.querySelector('#last-name').value;
-  const profilePicture = document.querySelector('#profile-picture').value;
-  
-    const object = {
-      firstName,
-      lastName,
-      profilePicture,
-      };
-
-    injectProfileIntoDOM(object);
-  
-    clearInputFields();
+    return {
+      firstName: firstNameInput,
+      lastName: lastNameInput,
     };
+  };
 
-function injectProfileIntoDOM() {
+  function clearInputFields() {
+    DOMSelectors.firstName.value = "";
+    DOMSelectors.lastName.value = "";
+    DOMSelectors.profilePicture.value = "";
+  };
 
-};
+  function removeProfile() {
+    const removeButton = document.querySelector(".button");
+    removeButton.addEventListener('click', function (event) {
+      event.currentTarget.parentNode.remove();
+    });
+  };
 
-function clearInputFields() {
-  const reset = document.querySelector("#reset");
-  reset.addEventListener("click", () => {
-    document.location.reload();
-  });
-};
+  addProfile();
+  createProfile();
+  clearInputFields();
+  removeProfile();
+});
 
-DOMSelectors.cardTitle.insertAdjacentHTML("beforeend", '<img src="https://images..com/photo-1683009427598-9c21a169f98f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">')
-
-const insert = DOMSelectors.querySelector
-
-
-
-
-
+//fix css, remake to custom song maker formatted like a spotify now playing
