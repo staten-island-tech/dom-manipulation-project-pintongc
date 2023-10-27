@@ -18,9 +18,10 @@ body {
   position: relative;
 }
 .card {
-  background-color: whitesmoke;
+  background-color: black;
   border: 0.3rem solid black;
   border-radius: 30px;
+  box-shadow: 0.5rem 0.3rem 0.2rem lightslategray;
   width: 50vw;
   height: 90vh;
   padding: 0%;
@@ -32,33 +33,26 @@ body {
 .card-title {
   margin: 20px;
   font-size: 2rem;
-  text-align: center
+  text-align: left;
+  color: white;
+}
+
+.card-artists {
+  margin: 20px;
+  font-size: 2rem;
+  text-align: left;
+  color: white;
 }
 
 .card-img {
-  width: 16rem;
+  width: 10%;
   height: auto;
-  margin-left: 7rem;
-  margin-right: 7rem;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 15px;
-  max-width: 100%;
-  display: block;
-  justify-content: center ;
-}
-
-h2 {
-  font-size: 2rem;
-  text-align: center;
-  display: inline-block;
-  margin-left: 18rem;
-  margin-right: 1rem;
-}
-
-h3 {
-  font-size: 2rem;
-  text-align: center;
-  display: inline-block;
-}
+  display: flex;
+  justify-content: center;
+;}
 
 .form-container {
   display: flex;
@@ -73,7 +67,7 @@ h3 {
 
 .form {
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   position: absolute;
   right: 50%;
   top: 5%;
@@ -84,4 +78,15 @@ position: absolute;
 margin-left: 40%;
 margin-top: 5%;
 }
+
+input {
+  margin-bottom: 10rem;
+  scale: 1.2;
+}
+
+label {
+  font-size: larger;
+  justify-content: left;
+}
+
 

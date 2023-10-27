@@ -15,10 +15,11 @@ DOMSelectors.form.addEventListener("submit", function (event) {
     DOMSelectors.gallery.insertAdjacentHTML(
       "beforeend",
       `<div class="card">
-        <div class="card-title">${DOMSelectors.firstName.value} ${DOMSelectors.lastName.value}</div>
         <div class="card-img"> <img
-          src="${profilePictureLink}"
-          alt="" srcset=""></div>
+        src="${profilePictureLink}"
+        alt="" srcset=""></div>
+        <div class="card-title">${DOMSelectors.firstName.value}</div>
+        <div class="card-artists">${DOMSelectors.lastName.value}</div>
         <button class="button" id="Reset">Reset</button>
       </div>`
     );
