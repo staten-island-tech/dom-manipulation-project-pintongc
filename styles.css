@@ -29,30 +29,38 @@ body {
   transition: all 0.3s
 }
 
+.card-img {
+  display: inline-block;
+  width: fit-content;
+  max-width: 50vw;
+  max-height: 40vh;
+}
+
 .card-title {
   margin: 20px;
   font-size: 2rem;
   text-align: left;
   color: white;
+  margin-top: 32%;
 }
 
 .card-artists {
   margin: 20px;
-  font-size: 2rem;
+  font-size: 1rem;
   text-align: left;
-  color: white;
+  color: gray;
 }
 
 img {
-  width: 90%;
-  height: auto;
-  margin-top: 1%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 30px;
   display: flex;
-  justify-content: center;
-  scale: 0.9;
+  width: fit-content;
+  max-width: 50vw;
+  max-height: 65vh;
+  height: auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  border-radius: 30px;
 }
 
 .form-container {
@@ -90,3 +98,4 @@ label {
   color: green;
   justify-content: left;
 }
+
